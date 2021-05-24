@@ -20,7 +20,7 @@ export default class About extends Component {
                 <Link to='/raysGithub'>Ray's Github</Link>
                 <Route path='/raysGithub' component={() => {
                         window.location.href = 'https://github.com/rayfinn55';
-                        return null;
+                        return null; 
                     }}/>
                     </div>
                <div className='profile' style={{float: 'right' }}>
