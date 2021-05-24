@@ -1,0 +1,16 @@
+.links{
+    display: flex;
+    justify-content:space-between;
+    font-size: 30px;
+    color: red;
+
+}
+.main{
+    background-image: url('https://d1ngs1zllzvvcs.cloudfront.net/wp-content/uploads/2018/01/coverartblogfeature-1024x597.jpg'); 
+    height: 800px;
+   
+}
+h1{
+    color: black;
+    font-size: 55px;
+}
