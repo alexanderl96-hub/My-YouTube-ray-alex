@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom'
-import HomeBased from "./Channel/HomeBased.js"
+import HomeBased from "./Channel/Homebased.js"
 import Home from "./Channel/Home.js"
 import About from "./Channel/About.js"
 import './App.css';
