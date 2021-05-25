@@ -3,6 +3,13 @@ import axios from 'axios'
  
 // const APIkey = process.env.REACT_APP_API_KEY
 
+const handlefirst= async(e)=>{
+        const {data} = await axios.get(`https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=AIzaSyDi-oQkFDT7KXTOjGxOtYcl9C45EEHLUjk&part=snippet&maxResults=50`)
+    console.log(data)
+    return  data.items
+ 
+}
+
 const handleApi= async(e)=>{
     e.preventDefault()
         const {data} = await axios.get(`https://www.googleapis.com/youtube/v3/videos?chart=mostPopular&key=AIzaSyDi-oQkFDT7KXTOjGxOtYcl9C45EEHLUjk&part=snippet&maxResults=50`)
@@ -22,6 +29,7 @@ const myvideos =async (id)=>{
 const display={
     handleApi,
     getsearch,
-    myvideos
+    myvideos,
+    handlefirst
 }
 export default display

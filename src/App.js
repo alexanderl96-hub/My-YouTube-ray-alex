@@ -3,9 +3,15 @@ import { Link, Route } from 'react-router-dom'
 import HomeBased from "./Channel/Homebased.js"
 import Home from "./Channel/Home.js"
 import About from "./Channel/About.js"
+import YoutubeApi from './Channel/YoutubeApi.js'
+
 import './App.css';
 
 function App() {
+  
+    const videos = YoutubeApi.handlefirst()
+    
+  
   return (
     <div className="App">
       <div className="prime">
@@ -42,7 +48,8 @@ function App() {
         {/* <div className="prime">
           <Link to="/Youtube">YouTube</Link> 
         </div> */}
-      </header>      
+      </header>  
+      {videos.snippet}
     </div>
 
   );
