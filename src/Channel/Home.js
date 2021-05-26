@@ -72,14 +72,15 @@ export default class Home extends Component {
                 <div className="videodisplay">
                     <img src={video.snippet.thumbnails.default.url}  
                     alt={video.snippet.description} 
-                    style={{ width:"300px", height: "300px"}} className='mapvideo'/>
+                    style={{ width:"360px",}} 
+                    className='mapvideo'/>
                     <h4>{video.snippet.title}</h4>
                 </div>
             </Link>
         )})
     
         return (
-            <div>
+            <div className='about'>
                 <div className="input">
                     <form onSubmit={this.handleSubmit}>
                       <input 

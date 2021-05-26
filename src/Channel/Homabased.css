@@ -6,7 +6,8 @@
 
 }
 .main{
-    background-image: url('https://d1ngs1zllzvvcs.cloudfront.net/wp-content/uploads/2018/01/coverartblogfeature-1024x597.jpg'); 
+    margin-top: -30px;
+    /* background-image: url('https://d1ngs1zllzvvcs.cloudfront.net/wp-content/uploads/2018/01/coverartblogfeature-1024x597.jpg');  */
     height: 800px;
    
 }

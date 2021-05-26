@@ -1,20 +1,38 @@
 .App {
   text-align: center;
 }
+.about{
+  background-color: #282c34;
+  margin-top: -20px;
+  height: 14500px;
+}
+.aboutit{
+  background-color: #282c34;
+  height: 800px;
+  margin-top: -20px;
+  
+}
 .input{
   margin-top: 20px;
+  padding: 20px;
+}
+.portada{
+  margin-top: 60px;
+  color: rgba(29, 29, 2, 0.733);
 }
 .prime{
   font-size: 20px;
+  
 }
 .videodisplay{
  display: flex;
  flex-wrap: wrap;
  margin-left: 60px;
- height: 200px;
+ height: 300px;
 }
 .mapvideo{
   margin-top: 10px;
+  
 }
 .collaborators {
   display: flex;
@@ -30,17 +48,30 @@
 }
 
 .App-header {
+  background-image: url('https://d1ngs1zllzvvcs.cloudfront.net/wp-content/uploads/2018/01/coverartblogfeature-1024x597.jpg'); 
   background-color: #282c34;
   color: white;
-  height: 10000px;
+  height: 740px;
   width: 100%;
 }
 .videorend{
   margin-top: 50px;
   width: 800px;
   height: 600px;
+  border-radius: 30px ;
+  border: 2px solid white;
 }
-
+.mapvideo{
+  border: 1px solid black;
+}
+.mapvideo:hover{
+  border: 2px solid rgb(114, 44, 44);
+  transition: all 1s;
+  transform: scale(1.1);
+  margin-left: 150px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
 .links{
   display: flex;
   align-items: center;

@@ -15,9 +15,10 @@ function App() {
   
   return (
     <div className="App">
+      <div className='porta'>
       <div className="prime">
           <Link to="/Youtube">YouTube</Link> 
-        </div>
+      </div>
       <header className="App-header">
         
         <Route exact path="/Youtube">
@@ -26,6 +27,10 @@ function App() {
               <Link to='/home'>Home</Link>
               <Link to='/about'>About</Link>
           </header>
+          <img src='http://cdn.onlinewebfonts.com/svg/img_24879.png' className="App-logo" alt="logo" />
+         <h1 className='portada'>
+               Welcome to my Channel.
+        </h1> 
         </Route>
         <Route exact path= "/home">
           <header className ="links">
@@ -50,7 +55,15 @@ function App() {
         {/* <div className="prime">
           <Link to="/Youtube">YouTube</Link> 
         </div> */}
-      </header>  
+         {/* <img src='http://cdn.onlinewebfonts.com/svg/img_24879.png' className="App-logo" alt="logo" />
+         <h1 className='portada'>
+               Welcome to my Channel.
+        </h1>  */}
+            
+      </header> 
+     
+      </div>
+       
       
     </div>
 
