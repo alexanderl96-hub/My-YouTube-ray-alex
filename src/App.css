@@ -18,11 +18,32 @@
 }
 .portada{
   margin-top: 60px;
-  color: rgba(29, 29, 2, 0.733);
+  color: rgba(27, 47, 233, 0.841);
+  font-variant:inherit;
 }
 .prime{
   font-size: 20px;
   
+}
+.playervars{
+  background-color: #282c34;
+  height: 1000px;
+
+}
+.parraph{
+  border: rgba(86, 135, 243, 0.5) groove 5px;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  font-family: Bookman, serif;
+  font-size: 25px;
+  flex-direction: column;
+  text-align:justify;
+  height: auto;
+  margin: 10px;
+}
+.git{
+  color: blue;
 }
 .videodisplay{
  display: flex;

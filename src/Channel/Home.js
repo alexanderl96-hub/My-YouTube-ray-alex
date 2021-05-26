@@ -77,6 +77,7 @@ export default class Home extends Component {
                     <h4>{video.snippet.title}</h4>
                 </div>
             </Link>
+            
         )})
     
         return (
