@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link, Route} from 'react-router-dom'
+// import {Link, Route} from 'react-router-dom'
 
 export default class About extends Component {
     render() {
@@ -17,23 +17,25 @@ export default class About extends Component {
                 <p>
                 Hey, my name is Ray, I’m 28 from Harlem, NY. I joined Pursuit to gain a better advantage for my son and family and change my career trajectory.  I’m hoping to use my love for tech to be able to transition to an engineering role like I hoped to before I left school. Fun Fact: in college I was the music coordinator for multiple college radio programs.
                 </p>
-                <Link to='/raysGithub'>Ray's Github</Link>
+                <a href='https://github.com/rayfinn55'>Ray's Github</a>
+                {/* <Link to='/raysGithub'>Ray's Github</Link>
                 <Route path='/raysGithub' component={() => {
                         window.location.href = 'https://github.com/rayfinn55';
                         return null; 
-                    }}/>
+                    }}/> */}
                     </div>
                <div className='profile' style={{float: 'right' }}>
-               <img src='https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F882211d0-d840-4027-a167-c0ef0c718763%2FWhatsAppImage2020-10-24at8.20.48PM.jpg?table=block&id=2939b869-df9d-44dd-bf21-a726c56c799e&spaceId=e2735e9b-8fe9-4c16-bdc1-be142cd1014e&width=1420&userId=c3b0fb20-3568-49fe-862e-3e2ebe5c3c2a&cache=v2' alt='Alex Pic' style={{height: "200px", width: "200px" }} />
+               <img src='https://i.imgur.com/4qMZueg.jpg' alt='Alex Pic' style={{height: "200px", width: "200px" }} />
                 <h3>Alexander La Rosa Perez</h3>
                 <p>
                 I'm from Cuba. I grew up in a family of artists and athletes. I went to a professional training school for dancers, teachers and choreographers and for most of my career I have been working as a professional dancer.  In 2016 I moved to the United States to dance in an Afro Cuban Dance company, however, after moving here have also worked in different spaces such as recycling, construction, electricity, dishwasher, service, while dancing and teaching at the same time. I like music, history, technology in all its aspects
                 </p>
-                <Link to='/alexGithub'>Alex's Github</Link>
+                <a href='https://github.com/alexanderl96-hub'>Alex's Github</a>
+                {/* <Link to='/alexGithub'>Alex's Github</Link>
                 <Route path='/alexGithub' component={() => {
-                            window.location.href = 'https://github.com/alexanderl96-hub';
+                            window.location.href  ='https://github.com/alexanderl96-hub'/>)
                              
-                             }}/>
+                             }}/> */}
                </div>
                
                 </div>

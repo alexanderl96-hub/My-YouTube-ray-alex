@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-
 import YoutubeApi from './YoutubeApi.js'
-import {Link, Route} from 'react-router-dom'
-import Videosrender from "./Videosrender.js"
+import {Link} from 'react-router-dom'
+
 
 
 export default class Home extends Component {
@@ -13,6 +12,7 @@ export default class Home extends Component {
             searchvideo:'',
             videosid: '',
             isError: false,
+            nowplay: [],
             redisplay: false,
             randomvid: [],
             APIError: false
@@ -32,14 +32,14 @@ export default class Home extends Component {
         }
     }
 
-    handleSubmit = (e)=>{
+    handleInput = (e)=>{
         e.preventDefault()
        this.setState({
            searchvideo: e.target.value
        })
     }
 
-    handleInput= async(e)=>{
+    handleSubmit= async(e)=>{
         e.preventDefault()
         const { searchvideo} = this.state
           
@@ -52,6 +52,7 @@ export default class Home extends Component {
                 videos: result,
                 searchvideo: '',
                 isError: false,
+                nowplay: result[0].id.videoId,
                 redisplay: false,
             })
         }else{
@@ -62,7 +63,69 @@ export default class Home extends Component {
            
     }
     
-    // clearSearch = ()=>{
+   
+    
+    render() {
+        const {searchvideo,videos } = this.state
+        const current = videos.map((video)=>{return (
+            <Link key={video.id.videoId} to={`/video/${video.id.videoId}`}>
+                <div className="videodisplay">
+                    <img src={video.snippet.thumbnails.default.url}  
+                    alt={video.snippet.description} 
+                    style={{ width:"300px", height: "300px"}} className='mapvideo'/>
+                    <h4>{video.snippet.title}</h4>
+                </div>
+            </Link>
+        )})
+    
+        return (
+            <div>
+                <div className="input">
+                    <form onSubmit={this.handleSubmit}>
+                      <input 
+                         onChange={this.handleInput}
+                         type="text" 
+                         placeholder="Search..."
+                         value={searchvideo}></input>
+                      <button type="submit">Search</button>
+                    </form>
+                    {current}
+                </div>
+            </div>
+        )
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // clearSearch = ()=>{
     //     this.setState({
     //         videos: [],
     //         searchvideo:'',
@@ -81,30 +144,3 @@ export default class Home extends Component {
     //         isError: false
     //     })
     // }
-    
-    render() {
-        const {searchvideo,videos, videosid } = this.state
-        const current = videos.map((video, id)=>{return <div key={id}value={video.snippet.title} className='videodisplay'>
-             {/* <p>{video.snippet.title}</p> <br></br> */}
-            <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title}
-             onClick={<Link to={'/video/:id'}/>}/><Route path={`/video/:id`} component={Videosrender}/>
-            <p>{video.snippet.title}</p>
-            </div>})
-        return (
-            <div>
-                <div className="input">
-                    <form onSubmit={this.handleInput}>
-                      <input 
-                         onChange={this.handleSubmit}
-                         type="text" 
-                         placeholder="Search..."
-                         value={searchvideo}></input>
-                      <button type="submit">Search</button>
-                    </form>
-                    {current  }
-                    {/* <Videosrender videosid={videosid}/>  */}
-                </div>
-            </div>
-        )
-    }
-}

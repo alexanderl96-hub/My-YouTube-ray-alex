@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link, Route} from 'react-router-dom'
 import HomeBased from "./Channel/Homebased.js"
 import Home from "./Channel/Home.js"
 import About from "./Channel/About.js"
-import YoutubeApi from './Channel/YoutubeApi.js'
+// import YoutubeApi from './Channel/YoutubeApi.js'
+import Videosrender from './Channel/Videosrender.js'
 
 import './App.css';
 
 function App() {
   
-    const videos = YoutubeApi.handlefirst()
+    // const videos = YoutubeApi.handlefirst()
     
   
   return (
@@ -44,12 +45,13 @@ function App() {
               <Route exact path="/" component={HomeBased}/>
               <Route path="/home" component={Home}/>
               <Route path="/about" component={About}/>
+              <Route path={`/video/:id`} component={Videosrender}/> 
         </div>
         {/* <div className="prime">
           <Link to="/Youtube">YouTube</Link> 
         </div> */}
       </header>  
-      {videos.snippet}
+      
     </div>
 
   );

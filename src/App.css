@@ -5,19 +5,16 @@
   margin-top: 20px;
 }
 .prime{
-  /* margin-top: 30px; */
   font-size: 20px;
-  
 }
 .videodisplay{
  display: flex;
- float: left;
  flex-wrap: wrap;
- /* margin-left: 20px; */
- padding: 10px;
+ margin-left: 60px;
  height: 200px;
- background-color: #282c34;
- 
+}
+.mapvideo{
+  margin-top: 10px;
 }
 .collaborators {
   display: flex;
@@ -37,6 +34,11 @@
   color: white;
   height: 10000px;
   width: 100%;
+}
+.videorend{
+  margin-top: 50px;
+  width: 800px;
+  height: 600px;
 }
 
 .links{
@@ -60,5 +62,12 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px){
+  .videorend{
+    width: 200px;
+    height: 300px;
   }
 }
