@@ -7,22 +7,31 @@ class CommentApp extends Component {
         this.state = {
             comments: [],
             input: "",
+            input2: '',
           };
     }
       handleChange = (e) => {
         const { value } = e.target;
         this.setState({
-            input: value
+            input: value,
+            
+          });
+      };
+      handleChange2 = (e) => {
+        const { value } = e.target;
+        this.setState({
+            
+            input2: value
           });
       };
       handleSubmit = (e) => {
         e.preventDefault();
-        const { input } = this.state;
+        const { input ,input2} = this.state;
         const newcomment = {
-          text: input,
+          text: input + input2
         };
         this.addComments(newcomment);
-        this.setState({ input: "" });
+        this.setState({ input: "" ,input2: ''});
       };
       addComments = (comment) => {
         this.setState((prevState) => {
@@ -34,12 +43,12 @@ class CommentApp extends Component {
       deleteComments = (comment) => {
         const { comments } = this.state;
         const filterComment = comments.filter((item) => {
-          return comment !== item;
+          return comment !== item
         });
         this.setState({ comments: filterComment });
       };
     render() {
-        const { input, comment } = this.state;
+        const { input, comments } = this.state;
         return (
             <div>
                 <h3>Comment Board</h3>
@@ -47,9 +56,10 @@ class CommentApp extends Component {
                 input={input}
                 handleChange={this.handleChange}
                 handleSubmit={this.handleSubmit}
+                handleChange2={this.handleChange2}
                 />
                 <CommentSection
-                comment={comment}
+                comment={comments}
                 deleteComments={this.deleteComments}
                 />
             </div>

@@ -1,16 +1,16 @@
 import React from "react";
-const Form = ({ input, handleChange, handleSubmit }) => {
+const Form = ({ input,input2,handleChange2, handleChange, handleSubmit }) => {
   return (
     <>
       <form className="Form" onSubmit={handleSubmit}>
-        <label htmlFor="input"><bold>Name:</bold></label>
+        <label htmlFor="input2"><bold>Name:</bold></label>
         <input className='forminput' 
-         onChange={handleChange} 
-         type="text" 
-         value={input} 
+         onChange={handleChange2} 
+         id="input2"
+         value={input2} 
          placeholder="Name..." required></input>
-        <label htmlFor="input"><bold>Enter Comment:</bold> </label>
-        <input className='forminput'
+        <label ><bold>Enter Comment:</bold> </label>
+        <input htmlFor="input"className='forminput'
           onChange={handleChange}
           id="input"
           value={input}

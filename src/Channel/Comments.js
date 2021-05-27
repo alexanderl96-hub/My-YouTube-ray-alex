@@ -1,10 +1,10 @@
 import React from "react";
 class Comments extends React.Component {
   componentDidMount() {
-    const { comments } = this.props;
+    // const { comments } = this.props;
   }
   componentWillUnmount() {
-    const { comments } = this.props;
+    // const { comments } = this.props;
   }
   render() {
     const { comments, deleteComments } = this.props;
