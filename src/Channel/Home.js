@@ -73,7 +73,7 @@ export default class Home extends Component {
                     <img src={video.snippet.thumbnails.default.url}  
                     alt={video.snippet.description} 
                     style={{ width:"360px",}} 
-                    className='mapvideo'/>
+                    className='mapvideo' title={video.snippet.title} description={video.snippet.description}/>
                     <h4>{video.snippet.title}</h4>
                 </div>
             </Link>

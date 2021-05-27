@@ -20,7 +20,6 @@ function App() {
           <Link to="/Youtube">YouTube</Link> 
       </div>
       <header className="App-header">
-        
         <Route exact path="/Youtube">
           <header className ="links">
               <Link to="/">YouTube</Link>
@@ -52,19 +51,11 @@ function App() {
               <Route path="/about" component={About}/>
               <Route path={`/video/:id`} component={Videosrender}/> 
         </div>
-        {/* <div className="prime">
-          <Link to="/Youtube">YouTube</Link> 
-        </div> */}
-         {/* <img src='http://cdn.onlinewebfonts.com/svg/img_24879.png' className="App-logo" alt="logo" />
-         <h1 className='portada'>
-               Welcome to my Channel.
-        </h1>  */}
-            
+       
       </header> 
      
       </div>
        
-      
     </div>
 
   );
