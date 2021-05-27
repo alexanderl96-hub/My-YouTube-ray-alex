@@ -1,3 +1,66 @@
+import React, { Component } from 'react'
+import CommentSection from './CommentSection'
+import Form from './Form'
+class CommentApp extends Component {
+    constructor() {
+        super()
+        this.state = {
+            comments: [],
+            input: "",
+          };
+    }
+      handleChange = (e) => {
+        const { value } = e.target;
+        this.setState({
+            input: value
+          });
+      };
+      handleSubmit = (e) => {
+        e.preventDefault();
+        const { input } = this.state;
+        const newcomment = {
+          text: input,
+        };
+        this.addComments(newcomment);
+        this.setState({ input: "" });
+      };
+      addComments = (comment) => {
+        this.setState((prevState) => {
+          return {
+            comments: [...prevState.comments, comment]
+          };
+        });
+      };
+      deleteComments = (comment) => {
+        const { comments } = this.state;
+        const filterComment = comments.filter((item) => {
+          return comment !== item;
+        });
+        this.setState({ comments: filterComment });
+      };
+    render() {
+        const { input, comment } = this.state;
+        return (
+            <div>
+                <h3>Comment Board</h3>
+                <Form
+                input={input}
+                handleChange={this.handleChange}
+                handleSubmit={this.handleSubmit}
+                />
+                <CommentSection
+                comment={comment}
+                deleteComments={this.deleteComments}
+                />
+            </div>
+        )
+    }
+}
+export default CommentApp
+
+
+
+
 // import React, { Component } from 'react'
 // import CommentSection from './CommentSection'
 // import Form from './Form'

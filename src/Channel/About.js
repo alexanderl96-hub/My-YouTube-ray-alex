@@ -8,8 +8,8 @@ export default class About extends Component {
                 <h2>About</h2>
                 <div>
                 <h1>Our Youtube App</h1>
-                 <p>This project is an artifical clone of the application Youtube. The program is built using React<br/> and calls upon the Youtube API
-                to render different videos based upon the search query. <br/> A user is able to type into a search bar and after submitting are able to see videos corresponding to that search. </p>
+                 <p><em>This project is an artifical clone of the application Youtube. The program is built using React<br/> and calls upon the Youtube API
+                to render different videos based upon the search query. <br/> A user is able to type into a search bar and after submitting are able to see videos corresponding to that search.</em> </p>
                 <div className="collaborators">
                     <div className='profile' style={{float: 'left' }}>
                     <img src='https://media-exp1.licdn.com/dms/image/C4D03AQHytxjtRoZ8Kw/profile-displayphoto-shrink_200_200/0/1607012315788?e=1622073600&v=beta&t=pVmt334EG1LgO7aqXUtNEbCCF5B7z-jg72b8fIUwyRo' alt='Ray pic' style={{height: "200px", width: "200px" }}/>

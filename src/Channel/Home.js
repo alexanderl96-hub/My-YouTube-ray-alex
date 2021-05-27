@@ -68,15 +68,17 @@ export default class Home extends Component {
     render() {
         const {searchvideo,videos } = this.state
         const current = videos.map((video)=>{return (
-            <Link key={video.id.videoId} to={`/video/${video.id.videoId}`}>
+            <Link key={video.id.videoId} to={`/video/${video.id.videoId}`} value={video.snippet.title}>
                 <div className="videodisplay">
                     <img src={video.snippet.thumbnails.default.url}  
                     alt={video.snippet.description} 
                     style={{ width:"360px",}} 
-                    className='mapvideo' title={video.snippet.title} description={video.snippet.description}/>
-                    <h4>{video.snippet.title}</h4>
+                    className='mapvideo' />
+                    {/* <h4>{video.snippet.title}</h4> */}
                 </div>
+                <h4 title={video.snippet.title} description={video.snippet.description}>{video.snippet.title}</h4>
             </Link>
+            
             
         )})
     

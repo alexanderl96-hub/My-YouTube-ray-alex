@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import YouTube from 'react-youtube'
-// import CommentApp from "./CommentApp.js"
-import Form from "./Form.js"
+import CommentApp from './CommentApp.js'
+// import Form from "./Form.js"
 
 
 
 export default class Videosrender extends Component {
-   
+ 
     render() {
         const opts = {
             playerVars: {
@@ -15,9 +15,10 @@ export default class Videosrender extends Component {
         }
         return (
             <div className="playervars">
-               
-                <YouTube className='videorend' videoId={this.props.match.params.id} opts={opts}/>
-                <Form />
+                
+                <YouTube className='videorend' videoId={this.props.match.params.id} opts={opts} />
+
+                <CommentApp />
             </div>
         )
     }
