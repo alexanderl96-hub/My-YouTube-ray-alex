@@ -7,6 +7,8 @@ import {Link} from 'react-router-dom'
 export default class Home extends Component {
     constructor(){
         super()
+        /* Nice use of state, as well as componentDidMount lifecycle method to set state
+        and handle errors */
         this.state={
             videos: [],
             searchvideo:'',
@@ -19,12 +21,19 @@ export default class Home extends Component {
         }
     }
     async componentDidMount(){
+        /*
+        Nice use of try/catch to handle errors for you API requests.
+        */
         try{
             const random = await YoutubeApi.handleApi()
             this.setState({
                 randomvid: random,
                 APIError: false
             })
+        /*
+        One way to improve this catch block would be to use the convention `catch(error)` and
+        then log `error` to improve error handling
+        */
         }catch{
             this.setState({
                 APIError: true
@@ -67,6 +76,9 @@ export default class Home extends Component {
     
     render() {
         const {searchvideo,videos } = this.state
+        /*
+        Nice use of .map to render a list of linked videos
+        */
         const current = videos.map((video)=>{return (
             <Link key={video.id.videoId} to={`/video/${video.id.videoId}`} value={video.snippet.title}>
                 <div className="videodisplay">

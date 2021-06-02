@@ -26,6 +26,7 @@
   
 }
 .Form{
+    /* Nice use of Flexbox */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,6 +137,8 @@
   }
 }
 
+/* Try adding more breakpoints so that your UI is dynamic and looks great
+on a variety of devices */
 @media screen and (max-width: 600px){
   .videorend{
     width: 200px;
