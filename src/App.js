@@ -21,6 +21,11 @@ function App() {
           
       </div>
       <header className="App-header">
+        {/*
+        This handling of your routes and views works, but would be improved by implementing
+        the <Switch>. Also, there is a lot of duplicate code here to handle the header links
+        which could be replaced with a NavBar component.
+        */}
         <Route exact path="/Youtube">
           <header className ="links">
               <Link to="/">YouTube</Link>

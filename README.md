@@ -1,3 +1,9 @@
+/*
+Use your README.md to write about and describe your project.
+You can add screenshots from your deployed app, and discuss the 
+challenges you overcame to create different features. Think of the
+project README.md as a written version of your live demo presentation.
+*/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
