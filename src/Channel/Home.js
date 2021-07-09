@@ -15,7 +15,6 @@ export default class Home extends Component {
             nowplay: [],
             redisplay: false,
             randomvid: [],
-            APIError: false
         }
     }
     async componentDidMount(){
@@ -23,11 +22,11 @@ export default class Home extends Component {
             const random = await YoutubeApi.handleApi()
             this.setState({
                 randomvid: random,
-                APIError: false
+                isError: false
             })
         }catch{
             this.setState({
-                APIError: true
+                isError: true
             })
         }
     }
@@ -66,17 +65,16 @@ export default class Home extends Component {
    
     
     render() {
-        const {searchvideo,videos } = this.state
+        const {searchvideo, videos, isError } = this.state
         const current = videos.map((video)=>{return (
-            <Link key={video.id.videoId} to={`/video/${video.id.videoId}`} value={video.snippet.title}>
+            <Link key={video.id.videoId} to={`/video/${video.id.videoId}`} value={video.snippet.title} className= "titlelink">
                 <div className="videodisplay">
                     <img src={video.snippet.thumbnails.default.url}  
                     alt={video.snippet.description} 
-                    style={{ width:"360px",}} 
+                    style={{ width:"400px", height:"310px"}} 
                     className='mapvideo' />
-                    {/* <h4>{video.snippet.title}</h4> */}
                 </div>
-                <h4 title={video.snippet.title} description={video.snippet.description}>{video.snippet.title}</h4>
+                <h4 title={video.snippet.title} description={video.snippet.description} className= 'fix'>{video.snippet.title} </h4>
             </Link>
             
             
@@ -84,16 +82,24 @@ export default class Home extends Component {
     
         return (
             <div className='about'>
+                <header className="nav">
+                    <Link to="/" className="links2">Youtube</Link>
+                    <Link to="/about" className="links2">About</Link>
+                </header>
                 <div className="input">
                     <form onSubmit={this.handleSubmit}>
                       <input 
                          onChange={this.handleInput}
                          type="text" 
                          placeholder="Search..."
-                         value={searchvideo}></input>
-                      <button type="submit">Search</button>
+                         value={searchvideo}
+                         className="expand"></input>
+                      <button type="submit" className="homebutton">Search</button>
                     </form>
-                    {current}
+                    <div>
+                        <h2 className="error">{isError ? "No results found": null}</h2>
+                    </div>
+                    { current }
                 </div>
             </div>
         )

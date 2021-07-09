@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.titlelink{
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+.fix:hover{
+  color: blue;
+}
+.fix{
+  margin-top: -40px;
+  margin-left: 30px;
+  word-wrap: break-word;
+}
+.expand{
+  width: 300px;
+  font-size: 18px;
+}
+.homebutton{
+  font-size: 18px;
+}

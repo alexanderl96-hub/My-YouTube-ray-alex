@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Route} from 'react-router-dom'
+import {Switch, Link, Route} from 'react-router-dom'
 import HomeBased from "./Channel/Homebased.js"
 import Home from "./Channel/Home.js"
 import About from "./Channel/About.js"
@@ -16,11 +16,20 @@ function App() {
   return (
     <div className="App">
       <div className='porta'>
-      <div className="prime">
-          <Link to="/Youtube">YouTube</Link> 
-          
-      </div>
-      <header className="App-header">
+        <div className="prime">
+            <Link to="/" className="prime"/> 
+        </div>
+      <main>
+        <Switch>
+        <div className='homebased'>
+              <Route exact path="/" component={HomeBased}/>
+              <Route exact path="/home" component={Home}/>
+              <Route path="/about" component={About}/>
+              <Route path={`/video/:id`} component={Videosrender}/> 
+        </div>
+        </Switch>
+      </main>
+      {/* <header className="App-header">
         <Route exact path="/Youtube">
           <header className ="links">
               <Link to="/">YouTube</Link>
@@ -53,7 +62,7 @@ function App() {
               <Route path={`/video/:id`} component={Videosrender}/> 
         </div>
        
-      </header> 
+      </header>  */}
      
       </div>
        

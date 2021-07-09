@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 .about{
@@ -38,7 +38,7 @@
  height: 20px;
 }
 .button{
- 
+
   background-color: aqua;
   width: 100px;
   height: 25px;
@@ -105,12 +105,14 @@
   border: 1px solid black;
 }
 .mapvideo:hover{
-  border: 2px solid rgb(114, 44, 44);
+  border: 1px solid rgba(114, 44, 44, 0.527);
   transition: all 1s;
   transform: scale(1.1);
   margin-left: 150px;
   margin-top: 20px;
   border-radius: 5px;
+  color: white;
+  border-radius: 50px;
 }
 .links{
   display: flex;
@@ -119,9 +121,9 @@
   text-decoration:none;
   background-color: rgb(245, 10, 10);
   border: 1px solid gray;
-  height: 60px;
+  height: 100px;
   font-weight: 400;
-}
+} */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -136,9 +138,178 @@
   }
 }
 
-@media screen and (max-width: 600px){
-  .videorend{
+@media (max-width: 800px) and (min-width: 600px){
+  body{
+    width: 100%;
+    height: 100%;
+  }
+}
+@media(orientation: landscape){
+  .App {
+    text-align: center;
+  }
+  .about{
+    background-color: #282c34;
+    margin-top: -29px;
+    height: 14500px;
+  }
+  .aboutit{
+    background-color: #282c34;
+    height: 957px;
+    margin-top: -29px;
+    
+  }
+  .input{
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .portada{
+    margin-top: 240px;
+    color: rgba(9, 31, 224, 0.841);
+    font-variant:inherit;
+    font-size: 70px;
+  }
+  .portLink{
+    text-decoration: none;
+    
+  }
+  .prime{
+    font-size: 50px;
+    text-decoration: none;
+  }
+  .Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px;
+  }
+  .forminput{
     width: 200px;
-    height: 300px;
+   margin: auto;
+   height: 20px;
+  }
+  .button{
+  
+    background-color: aqua;
+    width: 100px;
+    height: 25px;
+    margin: auto;
+  }
+  .playervars{
+    background-color: #282c34;
+    height: 1000px;
+  
+  }
+  .videodisplay{
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: 60px;
+   height: 300px;
+  }
+  .mapvideo{
+    margin-top: 10px;
+    
+  }
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+    background-color: red;
+    border-radius: 60px;
+    margin-top: 250px;
+  }
+  .nav{
+    background-color: red;
+    height: 110px;
+    font-size: 45px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .links2{
+    color: black;
+    text-decoration: none;
+    justify-content: space-around;
+    margin: auto;
+  }
+  .links2:hover{
+    color: aliceblue;
+  }
+  .videorend{
+    margin-top: 50px;
+    width: 800px;
+    height: 500px;
+    border-radius: 30px ;
+    border: 2px solid white;
+  }
+  .arrowBack{
+    text-decoration: none;
+  }
+  .arrow{
+    filter: invert(100%);
+  }
+  .error{
+    color: white;
+  }
+  .mapvideo{
+    border: 1px solid black;
+  }
+  .mapvideo:hover{
+    border: 1px solid rgba(114, 44, 44, 0.527);
+    transition: all 1s;
+    transform: scale(1.1);
+    margin-left: 150px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    border-radius: 50px;
+  }
+  .main{  
+    height: 958px;
+    background-image: url('https://d1ngs1zllzvvcs.cloudfront.net/wp-content/uploads/2018/01/coverartblogfeature-1024x597.jpg'); 
+    
+  }
+  .about1{
+    font-size: 35px;
+    color: rgb(17, 16, 16)
+  }
+  h1{
+      color: rgb(82, 79, 79);
+      font-size: 55px;
+  }
+  .about2{
+    font-size: 23px;
+    color: rgb(151, 146, 146);
+  }
+  .collaborators {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about3{
+    font-size: 20px;
+    color: rgb(180, 175, 175);
+  }
+  .parraph{
+    border: rgba(86, 135, 243, 0.5) groove 5px;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    font-family: Bookman, serif;
+    font-size: 25px;
+    flex-direction: column;
+    text-align:justify;
+    height: auto;
+    margin: 10px;
+    color: rgb(206, 203, 203);
+  }
+  .git{
+    color: rgb(253, 247, 247);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .git:hover{
+    color: rgb(27, 27, 238);
   }
 }
