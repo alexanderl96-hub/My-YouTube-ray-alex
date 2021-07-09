@@ -184,21 +184,33 @@
     gap: 5px;
     margin: 20px;
   }
+  .commts{
+    color: aliceblue;
+    font-size: 25px;
+  }
   .forminput{
-    width: 200px;
+    width: 320px;
    margin: auto;
-   height: 20px;
+   height: 25px;
+   font-size: 18px;
   }
   .button{
-  
     background-color: aqua;
-    width: 100px;
-    height: 25px;
+    width: 110px;
+    height: 30px;
     margin: auto;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .label{
+    color: aliceblue;
+    font-size: 20px;
   }
   .playervars{
     background-color: #282c34;
-    height: 1000px;
+    height: 1200px;
+    margin-top: -40px;
   
   }
   .videodisplay{
@@ -232,6 +244,7 @@
     text-decoration: none;
     justify-content: space-around;
     margin: auto;
+    margin-top: 40px;
   }
   .links2:hover{
     color: aliceblue;

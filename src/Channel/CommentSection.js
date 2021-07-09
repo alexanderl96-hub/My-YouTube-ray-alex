@@ -5,14 +5,17 @@ class CommentSection extends React.Component {
     // const comments = this.props.comments;
   }
   render() {
-    const { CommentSection, deleteComments } = this.props;
+    const { comment, deleteComments } = this.props;
     // const last = CommentSection.map((comments) => {
     //   return <Comments comments={comments} deleteComments={deleteComments} />;
     // })
     return (
-      <ul id="comment">
-        {CommentSection}
-      </ul>
+      <div>
+          <ul id="comment">
+             {comment}
+           </ul>
+      </div>
+      
     );
   }
 }

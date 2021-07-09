@@ -3,17 +3,17 @@ const Form = ({ input,input2,handleChange2, handleChange, handleSubmit }) => {
   return (
     <>
       <form className="Form" onSubmit={handleSubmit}>
-        <label htmlFor="input2"><bold>Name:</bold></label>
+        <label htmlFor="input" className="label"><bold>Name:</bold></label>
         <input className='forminput' 
-         onChange={handleChange2} 
-         id="input2"
-         value={input2} 
+         onChange={handleChange} 
+         id="input"
+         value={input} 
          placeholder="Name..." required></input>
-        <label ><bold>Enter Comment:</bold> </label>
-        <input htmlFor="input"className='forminput'
-          onChange={handleChange}
+        <label className="label"><bold>Enter Comment:</bold> </label>
+        <input htmlFor="input2"className='forminput'
+          onChange={handleChange2}
           id="input"
-          value={input}
+          value={input2}
           placeholder="Enter Comment..." required/>
           <button type="submit" className="button">Submit</button>
       </form>

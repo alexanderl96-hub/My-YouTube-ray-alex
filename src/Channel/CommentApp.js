@@ -8,6 +8,8 @@ class CommentApp extends Component {
             comments: [],
             input: "",
             input2: '',
+            name: "",
+            comment: ""
           };
     }
       handleChange = (e) => {
@@ -21,43 +23,46 @@ class CommentApp extends Component {
         const { value } = e.target;
         this.setState({
             
-            input2: value
+            input2: value,
           });
       };
       handleSubmit = (e) => {
         e.preventDefault();
-        const { input ,input2} = this.state;
-        const newcomment = {
-          text: input + input2
-        };
-        this.addComments(newcomment);
-        this.setState({ input: "" ,input2: ''});
+        const { input , input2} = this.state;
+        // const newcomment = {
+        //   name: input,
+        //   comment: input2,
+        // };
+        // this.comments(newcomment);
+        this.setState({name: input,comment: input2} );
       };
-      addComments = (comment) => {
-        this.setState((prevState) => {
-          return {
-            comments: [...prevState.comments, comment]
-          };
-        });
-      };
-      deleteComments = (comment) => {
-        const { comments } = this.state;
-        const filterComment = comments.filter((item) => {
-          return comment !== item
-        });
-        this.setState({ comments: filterComment });
-      };
+      // addComments = (comment) => {
+      //   this.setState((prevState) => {
+      //     return {
+      //       comments: [...prevState.comments, comment]
+      //     };
+      //   });
+      // };
+      // deleteComments = (comment) => {
+      //   const { comments } = this.state;
+      //   const filterComment = comments.filter((item) => {
+      //     return comment !== item
+      //   });
+      //   this.setState({ comments: filterComment });
+      // };
     render() {
-        const { input, comments } = this.state;
+        const { input, comments, name, comment } = this.state;
         return (
             <div>
-                <h3>Comment Board</h3>
+                <h3 className="commts">Comment Board</h3>
                 <Form
                 input={input}
                 handleChange={this.handleChange}
                 handleSubmit={this.handleSubmit}
                 handleChange2={this.handleChange2}
                 />
+                <h2>Name: {name}</h2>
+                <h2>Comment: {comment}</h2>
                 <CommentSection
                 comment={comments}
                 deleteComments={this.deleteComments}
