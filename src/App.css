@@ -1,53 +1,94 @@
-/* .App {
+.App {
   text-align: center;
 }
 .about{
   background-color: #282c34;
-  margin-top: -20px;
+  margin-top: -29px;
   height: 14500px;
 }
 .aboutit{
   background-color: #282c34;
-  height: 800px;
-  margin-top: -20px;
-  
+  height: 1800px;
+  margin-top: -29px;
 }
-.input{
-  margin-top: 20px;
-  padding: 20px;
+.main{  
+  height: 842px;
+  background-image: url('https://d1ngs1zllzvvcs.cloudfront.net/wp-content/uploads/2018/01/coverartblogfeature-1024x597.jpg'); 
+  
 }
 .portada{
-  margin-top: 60px;
-  color: rgba(27, 47, 233, 0.841);
+  margin-top: 140px;
+  color: rgba(9, 31, 224, 0.841);
   font-variant:inherit;
+  font-size: 70px;
 }
-.prime{
-  font-size: 20px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  background-color: red;
+  border-radius: 60px;
+  margin-top: 300px;
+}
+.portLink{
+  text-decoration: none;
   
 }
-.Form{
+.nav{
+  background-color: red;
+  height: 90px;
+  font-size: 25px;
+  font-weight: 600;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  margin: 20px;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.forminput{
-  width: 200px;
- margin: auto;
- height: 20px;
-}
-.button{
-
-  background-color: aqua;
-  width: 100px;
-  height: 25px;
+.links2{
+  color: black;
+  text-decoration: none;
+  justify-content: space-around;
   margin: auto;
+  margin-top: 40px;
 }
-.playervars{
-  background-color: #282c34;
-  height: 1000px;
+.input{
+  margin-top: 2px;
+  padding: 20px;
+}
+.expand{
+  width: 200px;
+  font-size: 15px;
+}
+.homebutton{
+  font-size: 15px;
+}
+.error{
+  color: white;
+  font-size: 18px;
+}
 
+
+
+
+.about1{
+  font-size: 25px;
+  color: rgb(17, 16, 16)
+}
+h1{
+    color: rgb(82, 79, 79);
+    font-size: 35px;
+}
+.about2{
+  font-size: 18px;
+  color: rgb(151, 146, 146);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.collaborators {
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+.about3{
+  font-size: 20px;
+  color: rgb(180, 175, 175);
 }
 .parraph{
   border: rgba(86, 135, 243, 0.5) groove 5px;
@@ -55,75 +96,18 @@
   padding: 10px;
   flex-wrap: wrap;
   font-family: Bookman, serif;
-  font-size: 25px;
+  font-size: 20px;
   flex-direction: column;
   text-align:justify;
   height: auto;
   margin: 10px;
+  color: rgb(206, 203, 203);
 }
 .git{
-  color: blue;
+  color: rgb(253, 247, 247);
+  text-decoration: none;
+  font-size: 18px;
 }
-.videodisplay{
- display: flex;
- flex-wrap: wrap;
- margin-left: 60px;
- height: 300px;
-}
-.mapvideo{
-  margin-top: 10px;
-  
-}
-.collaborators {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  background-color: red;
-  border-radius: 60px;
-  margin-top: 120px;
-}
-
-.App-header {
-  background-image: url('https://d1ngs1zllzvvcs.cloudfront.net/wp-content/uploads/2018/01/coverartblogfeature-1024x597.jpg'); 
-  background-color: #282c34;
-  color: white;
-  height: 740px;
-  width: 100%;
-}
-.videorend{
-  margin-top: 50px;
-  width: 700px;
-  height: 500px;
-  border-radius: 30px ;
-  border: 2px solid white;
-}
-.mapvideo{
-  border: 1px solid black;
-}
-.mapvideo:hover{
-  border: 1px solid rgba(114, 44, 44, 0.527);
-  transition: all 1s;
-  transform: scale(1.1);
-  margin-left: 150px;
-  margin-top: 20px;
-  border-radius: 5px;
-  color: white;
-  border-radius: 50px;
-}
-.links{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-decoration:none;
-  background-color: rgb(245, 10, 10);
-  border: 1px solid gray;
-  height: 100px;
-  font-weight: 400;
-} */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
