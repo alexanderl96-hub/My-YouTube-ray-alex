@@ -71,7 +71,6 @@ export default class Home extends Component {
                 <div className="videodisplay">
                     <img src={video.snippet.thumbnails.default.url}  
                     alt={video.snippet.description} 
-                    style={{ width:"400px", height:"310px"}} 
                     className='mapvideo' />
                 </div>
                 <h4 title={video.snippet.title} description={video.snippet.description} className= 'fix'>{video.snippet.title} </h4>
